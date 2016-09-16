@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div data-ng-controller="Controller">
+        Name:
+        <br />
+        <input type="text" data-ng-model="name" /> {{name}}
+        <ul>
+            <li data-ng-repeat="cust in customers | filter:name | orderBy:'city'"> {{cust.name | uppercase}} - {{cust.city | lowercase}}</li>
+        </ul>
+    </div>
+</body>
+</html>
+<script src="Scripts/angular.min.js"></script>
+<script>
+
+    var myApp = angular.module('myApp', []);
+
+    myApp.controller('Controller', function Controller($scope) {
+        
+        $scope.customers = [
+             { name: 'Patrick Moore', city: 'Torrance' },
+             { name: 'Matt Brown', city: 'Saint Louis' },
+             { name: 'Mitchelle Magee', city: 'Long Beach' }
+        ];
+
+    });
+</script>
