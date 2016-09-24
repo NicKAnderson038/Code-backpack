@@ -25,7 +25,8 @@
         $scope.customers = [
              { name: 'Patrick Moore', city: 'Torrance' },
              { name: 'Matt Brown', city: 'Saint Louis' },
-             { name: 'Mitchelle Magee', city: 'Long Beach' }
+             { name: 'Mitchelle Magee', city: 'Long Beach' },
+             { name: 'Matthew Shelbourn', city: 'Arcadia' }
         ];
 
     });
